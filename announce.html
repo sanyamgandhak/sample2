@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/anouncement.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/dataCard.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <title>Document</title>
+
+    <script>
+        $(window).on("load", function () {
+            $(window).scroll(function () {
+                var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+                $(".plsfade").each(function () {
+                    /* Check the location of each desired element */
+                    var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+                    /* If the element is completely within bounds of the window, fade it in */
+                    if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                        if ($(this).css("opacity") == 0) { $(this).fadeTo(500, 1); }
+                    } else { //object goes out of view (scrolling up)
+                        if ($(this).css("opacity") == 1) { $(this).fadeTo(500, 0); }
+                    }
+                });
+            }).scroll(); //invoke scroll-handler on page-load
+        });
+    </script>
+</head>
+
+<body>
+    <header class="same">
+
+        <!-- <nav>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="events.html">
+                <li>Events</li>
+            </a>
+            <a href="#">
+                <li>Gallery</li>
+            </a>
+            <a href="#">
+                <li>Blog</li>
+            </a>
+            <a href="#">
+                <li>About us</li>
+            </a>
+            <a href="#">
+                <li>Academic</li>
+            </a>
+            <div class="icons">
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <a href="contactus.html"> <i class="fas fa-comment-dots"></i></a>
+                <a href="announce.html"><i class="fas fa-bell"></i></a>
+            </div>
+        </nav> -->
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">
+                <div></div>
+            </div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="contactus.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="makeitppr">Announcements</h1>
+
+        <p class="notsame">Like our work ? Well you can see all the new Updates here .</p>
+
+    </header>
+
+
+    <!-- testing -->
+    <div class="row12">
+        <div class="column">
+            <div class="card12">
+                <img src="./images/draw.jpg" alt="Avatar" width="100%">
+                <h3>Card 1</h3>
+                <p>Some text</p>
+                <p>Some text</p>
+            </div>
+        </div>
+        <div class="mobileup">
+            <div class="column">
+                <div class="card12">
+                    <img src="./images/draw.jpg" alt="Avatar" width="100%">
+                    <h3>Card 2</h3>
+                    <p>Some text</p>
+                    <p>Some text</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card12">
+                <img src="./images/draw.jpg" alt="Avatar" width="100%">
+                <h3>Card 3</h3>
+                <p>Some text</p>
+                <p>Some text</p>
+            </div>
+        </div>
+
+        <!-- <div class="column">
+      <div class="card12">
+          <img src="./images/draw.jpg" alt="Avatar" width="100%">
+        <h3>Card 4</h3>
+        <p>Some text</p>
+        <p>Some text</p>
+      </div>
+    </div> -->
+    </div>
+    <!-- testing -->
+
+
+
+    <section>
+
+        <div class="final">
+
+            <h1 id="test1">Want updates in your mail box ?</h1>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam eveniet illum harum dicta impedit fugiat -->
+            </p>
+
+            <form action="" class="formf">
+                <h3>Name</h3>
+                <input type="text" placeholder="Your Name..." class="new">
+                <h3>Email</h3>
+                <input type="text" placeholder="Your Email..." class="new"><br>
+                <button class="btn btn-primary">Subscribe Us</button>
+
+
+        </div>
+        <img src="./images/a.png" alt="Gcoey" class="final1">
+
+
+
+
+
+    </section>
+
+    <!-- for mobile  -->
+    <section class="finalformobile hideforcomp">
+        <h1 class="noh">Want updates in your mail box ?</h1>
+        <div class="mobile3">
+
+            <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam eveniet illum harum dicta impedit fugiat -->
+            </p>
+            <img src="./images/a.png" alt="Gcoey" class="w2">
+            <div class="formf2">
+            <form action="">
+                <h4>Name</h3>
+                <input type="text" placeholder="Your Name..." class="new">
+                <h4>Email</h3>
+                <input type="text" placeholder="Your Email..." class="new"><br><br>
+                <button class="btn btn-primary">Subscribe Us</button>
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+</body>
+
+</html>
+<!-- <script??? src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script???> -->

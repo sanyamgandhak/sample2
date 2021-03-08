@@ -1,0 +1,452 @@
+header {
+    background-image:url('https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1993&q=80');
+    background-repeat: no-repeat;
+    height:600px;
+    background-size: cover;
+    
+}
+body { 
+    margin: 0;
+    font-family: system-ui, sans-serif;
+}
+
+.wide{
+    font-size:65px;
+    color:rgb(255, 255, 255);
+    margin-right:290px; 
+    margin-top: 20px;
+    margin-bottom:auto;
+    
+
+}
+ .side{
+    font-size:65px;
+    color:rgb(255, 255, 255);
+    margin-left:340px;
+    margin-top:-70px;
+    margin-bottom:10px;
+    
+} 
+
+.s1{
+    margin-left:540px;
+    margin-top:100px;
+}
+
+section h1{
+    font-size:40px;
+    padding-bottom: 0px;;
+}
+
+.text
+{
+        
+        width: 50%;
+        height: 150px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 3px;
+        background-color: #ffffff;
+        font-size: 16px;
+        resize: none;
+      
+        
+}
+
+
+
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+input[type=password], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+
+.new:hover{
+    box-shadow: 0px 0px 20px #09f;
+}
+
+form h1{
+    padding:50px;
+}
+
+.btn{
+    background-color: #09f;
+    color: #ffffff;
+    border-radius:3px;
+    padding:10px;
+    margin-left:0px;
+}
+
+
+.sideme{
+    /* margin-left:15px; */
+    margin-top: 220px;
+    font-size: 55px;
+  
+  
+}
+
+.sideme1{
+    margin-left:440px;
+   
+  
+}
+
+.sideme2{
+    margin-left:190px;
+
+}
+
+/* .sideme1 h1{
+    color:blue
+} */
+
+
+
+/* hamrburger  */
+
+
+
+
+
+/* <!-- hamburger --> */
+     /* MENU STYLES */
+     :root {
+        --primary-color: rgba(13, 110, 139, 0.75);
+        --overlay-color: rgba(24, 39, 51, 0.85);
+        --menu-speed: 0.75s;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .menu-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .menu-wrap .toggler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+
+    .menu-wrap .hamburger {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        padding: 1rem;
+        background: var(--primary-color);
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hamburger Line */
+    .menu-wrap .hamburger>div {
+        position: relative;
+        flex: none;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+    }
+
+    /* Hamburger Lines - Top & Bottom */
+    .menu-wrap .hamburger>div::before,
+    .menu-wrap .hamburger>div::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+    }
+
+    /* Moves Line Down */
+    .menu-wrap .hamburger>div::after {
+        top: 10px;
+    }
+
+    /* Toggler Animation */
+    .menu-wrap .toggler:checked+.hamburger>div {
+        transform: rotate(135deg);
+    }
+
+    /* Turns Lines Into X */
+    .menu-wrap .toggler:checked+.hamburger>div:before,
+    .menu-wrap .toggler:checked+.hamburger>div:after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    /* Rotate On Hover When Checked */
+    .menu-wrap .toggler:checked:hover+.hamburger>div {
+        transform: rotate(225deg);
+    }
+
+    /* Show Menu */
+    .menu-wrap .toggler:checked~.menu {
+        visibility: visible;
+    }
+
+    .menu-wrap .toggler:checked~.menu>div {
+        transform: scale(1);
+        transition-duration: var(--menu-speed);
+    }
+
+    .menu-wrap .toggler:checked~.menu>div>div {
+        opacity: 1;
+        transition: opacity 0.4s ease 0.4s;
+    }
+
+    .menu-wrap .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-wrap .menu>div {
+        background: var(--overlay-color);
+        border-radius: 50%;
+        width: 200vw;
+        height: 200vw;
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        transition: all 0.4s ease;
+    }
+
+    .menu-wrap .menu>div>div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .menu-wrap .menu>div>div>ul>li {
+        list-style: none;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .menu-wrap .menu>div>div>ul>li>a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.4s ease;
+    }
+
+
+ .vody {
+  height:200px;
+  margin-bottom:90px;
+  color:whitesmoke;
+  display:left;
+  align-items:center;
+  /* justify-content:center; */
+  /* background:#ddd; */
+}
+.text-typing {
+  /* padding:20px 30px; */
+  /* background:#f5f5f5; */
+  margin-top:-280px;
+  font-size:45px;
+  font-family:monospace;
+  text-align: center;
+  color:whitesmoke;
+  overflow:hidden;
+
+  /* border-radius:50px; */
+}
+/* .text-typing p { */
+  
+  
+  
+  /* white-space:nowrap;
+  overflow:hidden;
+  animation:typing 6s steps(22,end) forwards,
+            blink 4s; */
+/* } */
+@keyframes typing {
+  0% { width:0% }
+  100% { width:100% }
+}
+@keyframes blink {
+  0%,100% {
+    border-right:2px solid transparent;
+  }
+  50% {
+    border-right:2px solid black;
+  }
+}
+
+ 
+  @keyframes typing {
+    0% { width:0% }
+    100% { width:100% }
+  }
+  @keyframes blink {
+    0%,100% {
+      border-right:2px solid transparent;
+    }
+    50% {
+      border-right:2px solid whitesmoke;
+    }
+        }
+    
+
+@media only screen and (max-width: 1200px) {
+    header nav {
+               
+         left: 5.5%;
+               
+        }
+           
+}
+@media  (min-width:600px) and (max-width: 1600px) {
+   
+   
+    .s1{
+        margin-left:510px;
+}
+
+.sideme1{
+  margin-left:400px;
+
+}
+.hideitforbig .mobiles1{
+  display: none;
+}
+}
+
+
+@media  (min-width:305px) and (max-width:500px) and (orientation: portrait) {
+  header {
+    background-image:url('https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1993&q=80');
+    background-repeat: no-repeat;
+    height:370px;
+    background-size: cover;
+    
+}
+
+.text-typing {
+  /* padding:20px 30px; */
+  /* background:#f5f5f5; */
+  margin-top:-150px;
+  font-size:48px;
+  font-family:monospace;
+  margin-left:10px;
+  color:whitesmoke
+  /* border-radius:50px; */
+}
+.sideme{
+  margin-top: 150px;
+  font-size: 40px;
+}
+
+  .sideme1{
+    display:none
+ }
+
+  .s1{
+   display: none;
+     
+  }
+  .mobiles1{
+    margin-top: -40px;
+    margin-left: 100px;
+    
+  }
+
+
+  
+ 
+  
+  header nav {
+    display: none;
+}
+.menu-wrap .hamburger {
+  display:flex;
+}
+.menu-wrap .hamburger>div {
+  display:flex;
+}
+.text-typing{
+  font-size:20px;
+  
+}
+
+.menu-wrap .hamburger{
+  background-color: transparent;
+}
+}
+
+
+
+
+/* hover  */
+.s1:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+  
+  /* When the animation is finished, start again */
+  animation-iteration-count:7s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
